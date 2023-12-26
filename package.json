@@ -1,0 +1,23 @@
+{
+  "name": "hanabi",
+  "version": "1.0.0",
+  "description": "ECS particles simulation engine",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
+  "author": "NoCymer",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "crypto-browserify": "^3.12.0",
+    "path": "^0.12.7"
+  }
+}
