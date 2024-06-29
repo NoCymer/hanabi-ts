@@ -1,10 +1,13 @@
-import Module from './engine/hanabi.js';
 import { EngineState } from "./engineState";
 
-// Loads the wasm part of the js artifact
-const module = (await Module());
-
 let engineState: EngineState = EngineState.paused;
+
+var module: any;
+declare var hanabi: any;
+
+export async function initWasm() {
+    module = await hanabi();
+}
 
 export function initEngine() {
     module._init_engine();

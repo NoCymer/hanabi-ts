@@ -8,16 +8,18 @@
     "/dist"
   ],
   "scripts": {
-    "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "dev": "tsc --build && npm run postbundle",
+    "build": "tsc --build && npm run postbundle",
+    "clean": "tsc --build --clean",
+    "postbundle": "copyfiles -u 1 src/engine/hanabi.wasm dist"
   },
   "author": "NoCymer",
   "license": "MIT",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "crypto-browserify": "^3.12.0",
     "path": "^0.12.7"
   }
 }
